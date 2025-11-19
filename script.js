@@ -1,6 +1,8 @@
 (function(){
   const words = ['Create', 'Build', 'Cultivate', 'Connect'];
   const el = document.getElementById('verb');
+  if (!el) return;
+
   let index = 0;
   let animating = false;
 
@@ -40,6 +42,7 @@
 // Water Bubbles Animation
 (function(){
   const bubblesContainer = document.getElementById('bubbles-container');
+  if (!bubblesContainer) return;
   
   function createBubble() {
     const bubble = document.createElement('div');

@@ -23,6 +23,7 @@ body {
   background-size: 140% 140%, 160% 160%, 200% 200%;
   background-attachment: fixed;
   overflow-x: hidden;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 L28 18 L16 18 Z' fill='%23FF6B6B' /%3E%3Cpath d='M15 4 L5 18 L15 18 Z' fill='%234ECDC4' /%3E%3Cpath d='M6 20 L8 26 L24 26 L26 20 Z' fill='%23FFD93D' /%3E%3Crect x='15' y='2' width='2' height='20' fill='%23556270' /%3E%3C/svg%3E") 16 16, auto;
 }
 
 /* Subtle reflective sheen overlay */
@@ -43,6 +44,17 @@ body::before {
   place-items: center;
   padding: 2rem;
   text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 800px;
+  width: 100%;
 }
 
 .title {
@@ -84,6 +96,39 @@ body::before {
   color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.chapter {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.chapter h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Animated drift for the background */
@@ -173,4 +218,95 @@ body::before {
     transform: translateY(-120vh) translateX(var(--drift)) scale(0.8);
     opacity: 0;
   }
+}
+
+/* Martin Page specific styles */
+.martin-page {
+  background: none;
+  animation: none;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.martin-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  /* Ensure it is behind content */
+  z-index: -1; 
+  background: url('assets/IMG_7010.jpg') no-repeat center center fixed;
+  background-size: cover;
+  filter: blur(2px);
+  transform: scale(1.1); /* Slightly larger to hide blur edges */
+  mix-blend-mode: normal;
+}
+
+/* Improved text contrast for Martin page - Venetian Style */
+.martin-page .content-wrapper {
+  background: transparent;
+  padding: 3rem;
+}
+
+.martin-page .title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: clamp(3rem, 6vw, 5rem);
+  letter-spacing: -0.02em;
+  text-shadow: 
+    0 0 30px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.8),
+    3px 3px 8px rgba(0,0,0,0.7),
+    -1px -1px 2px rgba(0,0,0,0.6);
+  color: #ffffff; /* Pure white for maximum contrast */
+  margin-bottom: 0.5rem;
+}
+
+.martin-page .subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-weight: 400;
+  font-style: italic;
+  color: #f4e4c1; /* Lighter gold for better visibility */
+  letter-spacing: 0.05em;
+  text-shadow: 
+    0 0 20px rgba(0, 0, 0, 0.9),
+    0 0 10px rgba(0, 0, 0, 0.8),
+    2px 2px 6px rgba(0,0,0,0.7),
+    -1px -1px 2px rgba(0,0,0,0.6);
+  margin-bottom: 2rem;
+}
+
+.martin-page h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #ffffff;
+  text-shadow: 
+    0 0 25px rgba(0, 0, 0, 0.9),
+    0 0 12px rgba(0, 0, 0, 0.8),
+    2px 2px 6px rgba(0,0,0,0.7),
+    -1px -1px 2px rgba(0,0,0,0.6);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.martin-page .contact {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  color: #ffffff;
+  text-shadow: 
+    0 0 20px rgba(0, 0, 0, 0.9),
+    0 0 10px rgba(0, 0, 0, 0.8),
+    2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.martin-page .contact a {
+  color: #f4e4c1;
+  text-decoration-color: rgba(244, 228, 193, 0.7);
+  text-shadow: 
+    0 0 20px rgba(0, 0, 0, 0.9),
+    0 0 10px rgba(0, 0, 0, 0.8),
+    2px 2px 6px rgba(0,0,0,0.7);
 }
