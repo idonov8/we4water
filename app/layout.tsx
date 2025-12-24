@@ -6,7 +6,6 @@ import { LanguageProvider } from '@/src/i18n/provider';
 import { BubblesController } from './components/BubblesController';
 import { HeroVerbController } from './components/HeroVerbController';
 import { LightboxController } from './components/LightboxController';
-import { MailtoFormController } from './components/MailtoFormController';
 import { BodyClassController } from './components/BodyClassController';
 
 export const metadata: Metadata = {
@@ -36,7 +35,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <HeroVerbController />
           <BubblesController />
           <LightboxController />
-          <MailtoFormController />
 
           <a className="skip-link" href="#main">
             Skip to content

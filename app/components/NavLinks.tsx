@@ -15,8 +15,7 @@ const NAV_ITEMS: NavItem[] = [
   { href: '/treatment/', key: 'nav.treatment' },
   { href: '/culture/', key: 'nav.culture' },
   { href: '/about/', key: 'nav.about' },
-  { href: '/join/', key: 'nav.join' },
-  { href: '/contact/', key: 'nav.contact' }
+  { href: '/join/', key: 'nav.join' }
 ];
 
 function normalizePath(path: string) {

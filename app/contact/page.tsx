@@ -1,101 +1,99 @@
-import Link from 'next/link';
 import { Trans } from '@/app/components/Trans';
 
 export default function ContactPage() {
   return (
-    <>
-      <section className="hero surface">
-        <div>
+    <section className="contact-hero hero surface">
+      <div className="contact-stack">
+        <div className="contact-intro">
           <h1>
             <Trans k="contact.heroTitle" />
           </h1>
-          <p>
-            <Trans k="contact.heroLead" />
-          </p>
+          <p className="subtitle">Write us, follow along, or reach out for collaborations.</p>
         </div>
-      </section>
 
-      <section id="form" className="section surface two-col">
-        <div>
-          <h2>
-            <Trans k="contact.emailLabel" />
-          </h2>
-          <p>
-            <a href="mailto:riechelmann@we4water.com">riechelmann@we4water.com</a>
-          </p>
-          <h2>
-            <Trans k="contact.socialLabel" />
-          </h2>
-          <p>
-            <a href="https://www.instagram.com/martin.the.boat/" target="_blank" rel="noopener noreferrer">
-              Instagram
-            </a>
-          </p>
-        </div>
-        <div>
-          <h2>
-            <Trans k="contact.formTitle" />
-          </h2>
-          <form className="form-grid" data-mailto-form data-mailto="riechelmann@we4water.com">
-            <label>
-              <span>
-                <Trans k="contact.name" />
-              </span>
-              <input type="text" name="name" placeholder="Name" />
-            </label>
-            <label>
-              <span>
-                <Trans k="contact.email" />
-              </span>
-              <input type="email" name="email" required placeholder="Email" />
-            </label>
-            <label>
-              <span>
-                <Trans k="contact.topic" />
-              </span>
-              <input type="text" name="topic" placeholder="Topic" />
-            </label>
-            <label style={{ gridColumn: '1 / -1' }}>
-              <span>
-                <Trans k="contact.message" />
-              </span>
-              <textarea name="message" required placeholder="Message" />
-            </label>
-            <div className="cta-stack" style={{ gridColumn: '1 / -1' }}>
-              <button className="btn" type="submit">
-                <Trans k="contact.submit" />
-              </button>
-              <a className="btn secondary" href="mailto:riechelmann@we4water.com">
-                <Trans k="common.contact" />
+        <div className="contact-panel" aria-label="Contact options">
+          <div className="contact-row">
+            <div className="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" focusable="false">
+                <path
+                  d="M4 6.5h16v11H4v-11Z"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M4.8 7.2 12 12.2l7.2-5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+            <div className="contact-row-body">
+              <div className="contact-label">Email</div>
+              <a className="contact-link" href="mailto:riechelmann@we4water.com">
+                riechelmann@we4water.com
               </a>
             </div>
-          </form>
-        </div>
-      </section>
+          </div>
 
-      <section id="legal" className="section surface">
-        <h2>
-          <Trans k="contact.legalTitle" />
-        </h2>
-        <h3>
-          <Trans k="contact.imprint" />
-        </h3>
-        <p>
-          <Trans k="contact.imprint" />
-        </p>
-        <h3>
-          <Trans k="contact.privacy" />
-        </h3>
-        <p>
-          <Trans k="contact.privacy" />
-        </p>
-        <div className="cta-stack">
-          <Link className="btn secondary" href="/">
-            <Trans k="common.backHome" />
-          </Link>
+          <div className="contact-row">
+            <div className="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" focusable="false">
+                <rect
+                  x="6"
+                  y="6"
+                  width="12"
+                  height="12"
+                  rx="3"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                />
+                <circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" strokeWidth="1.8" />
+                <circle cx="16.5" cy="7.5" r="0.9" fill="currentColor" />
+              </svg>
+            </div>
+            <div className="contact-row-body">
+              <div className="contact-label">Instagram</div>
+              <div className="ig-list">
+                <a
+                  className="ig-pill"
+                  href="https://www.instagram.com/martin.the.boat/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="ig-name">Martin the Boat</span>
+                  <span className="ig-desc">News and updates from Martin and We4Water projects on the water.</span>
+                </a>
+
+                <a
+                  className="ig-pill"
+                  href="https://www.instagram.com/hanseart.berlin/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="ig-name">HanseArt</span>
+                  <span className="ig-desc">Art & culture around the historic vessel Hanseat.</span>
+                </a>
+
+                <a
+                  className="ig-pill"
+                  href="https://www.instagram.com/rioklangberlin/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="ig-name">rioKlang</span>
+                  <span className="ig-desc">A series of musical events aboard Elisabeth and Hanseat.</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 
