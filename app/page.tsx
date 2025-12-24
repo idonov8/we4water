@@ -7,7 +7,8 @@ export default function HomePage() {
       <section className="hero surface">
         <div>
           <h1 className="title-flex">
-            <Trans k="home.heroWe" /> <span id="verb">Create</span> <Trans k="home.heroFor" />
+            <Trans k="home.heroWe" /> <span id="verb">Create</span> 
+            <br/><Trans k="home.heroFor" />
           </h1>
           <p className="subtitle">
             <Trans k="home.heroSubtitle" />

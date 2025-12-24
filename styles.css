@@ -476,7 +476,7 @@ body::before {
 }
 
 .title-flex {
-  display: inline-flex;
+  display: block;
   gap: 0.35rem;
   align-items: baseline;
   flex-wrap: wrap;
