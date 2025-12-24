@@ -175,12 +175,14 @@ body::before {
   inset: 0;
   pointer-events: none;
   overflow: hidden;
-  z-index: 1;
+  /* Keep bubbles visible even when sections cover viewport */
+  z-index: 5;
 }
 
 .bubble {
   position: absolute;
-  bottom: -100px;
+  /* Start at bottom of page */
+  bottom: 0;
   background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
   border-radius: 50%;
   opacity: 0;
@@ -206,7 +208,7 @@ body::before {
 @keyframes rise {
   0% {
     transform: translateY(0) translateX(0) scale(0.2);
-    opacity: 0.15;
+    opacity: 0;
   }
   10% {
     opacity: 0.45;
@@ -234,7 +236,7 @@ body::before {
   inset: 0;
   /* Ensure it is behind content */
   z-index: -1; 
-  background: url('assets/IMG_7010.jpg') no-repeat center center fixed;
+  background: url('/assets/IMG_7010.jpg') no-repeat center center fixed;
   background-size: cover;
   filter: blur(2px);
   transform: scale(1.1); /* Slightly larger to hide blur edges */
