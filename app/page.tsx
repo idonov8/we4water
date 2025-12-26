@@ -7,8 +7,9 @@ export default function HomePage() {
       <section className="hero surface">
         <div>
           <h1 className="title-flex">
-            <Trans k="home.heroWe" /> <span id="verb">Create</span> 
-            <br/><Trans k="home.heroFor" />
+            <Trans k="home.heroWe" /> <Trans k="home.heroVerbCreate" id="verb" />
+            <br />
+            <Trans k="home.heroFor" />
           </h1>
           <p className="subtitle">
             <Trans k="home.heroSubtitle" />
@@ -16,17 +17,6 @@ export default function HomePage() {
           <p>
             <Trans k="home.heroLead1" />
           </p>
-          <div className="hero-actions">
-            <Link className="btn" href="/join/">
-              <Trans k="home.ctaJoin" />
-            </Link>
-            <Link className="btn secondary" href="/contact/#form">
-              <Trans k="home.ctaBoard" />
-            </Link>
-            <a className="btn secondary" href="https://badberlin.info" target="_blank" rel="noopener noreferrer">
-              <Trans k="home.ctaSwim" />
-            </a>
-          </div>
         </div>
       </section>
 

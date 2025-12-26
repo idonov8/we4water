@@ -610,10 +610,7 @@ body::before {
 }
 
 .list li {
-  padding: 0.75rem 0.9rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.25rem 0.9rem;
 }
 
 .list strong {
@@ -668,14 +665,15 @@ body::before {
 }
 
 .lightbox {
-  position: fixed;
+  position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: radial-gradient(120% 120% at 50% 50%, rgba(2, 44, 67, 0.9), rgba(0, 0, 0, 0.92));
   display: none;
   align-items: center;
   justify-content: center;
   z-index: 1000;
   padding: 1.5rem;
+  backdrop-filter: blur(6px);
 }
 
 .lightbox.open {
@@ -691,15 +689,46 @@ body::before {
 }
 
 .lightbox button {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   position: absolute;
-  top: 18px;
-  right: 18px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.14);
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 999px;
-  padding: 0.45rem 0.85rem;
+  padding: 0.55rem 0.95rem;
   cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.lightbox button:hover,
+.lightbox button:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  outline: none;
+}
+
+.lightbox-close {
+  top: 18px;
+  right: 18px;
+}
+
+.lightbox-arrow {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+}
+
+.lightbox-arrow.prev {
+  left: 18px;
+}
+
+.lightbox-arrow.next {
+  right: 18px;
 }
 
 .footer {

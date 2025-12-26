@@ -7,7 +7,10 @@ export default function HanseatPage() {
         <div>
           <h1>Hanseat</h1>
           <p className="subtitle">Historic cargo barge restoration</p>
-          <p className="muted">Built 1907 in steel/wood composite, approx. 54 × 6 m, former cargo barge without engine.</p>
+          <p className="muted">
+            Built 1907 in steel/wood composite, approx. 54 × 6 m, former cargo barge without engine. Now being renewed
+            as a generous cultural and community platform on the water.
+          </p>
           <div className="cta-stack">
             <Link className="btn secondary" href="/crafts/">
               Back to crafts
@@ -19,8 +22,37 @@ export default function HanseatPage() {
         </div>
       </section>
 
+      <section className="section surface two-col">
+        <div>
+          <h2>Specifications</h2>
+          <ul className="list">
+            <li>
+              <strong>Build</strong> — 1907, steel/wood composite cargo barge
+            </li>
+            <li>
+              <strong>Dimensions</strong> — ~54 × 6 m, expansive open deck
+            </li>
+            <li>
+              <strong>Propulsion</strong> — engineless
+            </li>
+            <li>
+              <strong>Status</strong> — finished restoration with volunteer teams and craft specialists
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Services & Features</h2>
+          <ul className="list">
+            <li>Large-format deck and interior for theater, concerts, circus rigging, and public gatherings.</li>
+            <li>Ample volume for exhibits, studios, classrooms, or conferences on the water.</li>
+          </ul>
+        </div>
+      </section>
+
       <section className="section surface">
-        <h2>Gallery</h2>
+        <h2>Gallery / videos</h2>
+        <p className="muted">Click any image to open the lightbox.</p>
         <div className="gallery-rows">
           <img src="/assets/Hanseat/Hanseat%20in%20warehouse.jpg" alt="Hanseat in warehouse" loading="lazy" data-gallery-img />
           <img src="/assets/Hanseat/Hanseat%20in%20warehouse%202.jpg" alt="Hanseat in warehouse" loading="lazy" data-gallery-img />
@@ -53,6 +85,10 @@ export default function HanseatPage() {
           <img src="/assets/Hanseat/8.jpg" alt="Hanseat photo" loading="lazy" data-gallery-img />
           <img src="/assets/Hanseat/9.jpg" alt="Hanseat photo" loading="lazy" data-gallery-img />
           <img src="/assets/Hanseat/10.jpg" alt="Hanseat photo" loading="lazy" data-gallery-img />
+          <img src="/assets/Water_culture/conference%20on%20Hanseat.jpg" alt="Conference on Hanseat" loading="lazy" data-gallery-img />
+          <img src="/assets/Water_culture/conference%20on%20Hanseat%202.jpg" alt="Conference on Hanseat 2" loading="lazy" data-gallery-img />
+          <img src="/assets/Water_culture/conference%20on%20Hanseat%203.jpg" alt="Conference on Hanseat 3" loading="lazy" data-gallery-img />
+          <img src="/assets/Water_culture/concert%20on%20Hanseat.jpg" alt="Concert on Hanseat" loading="lazy" data-gallery-img />
         </div>
       </section>
     </>

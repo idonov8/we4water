@@ -34,7 +34,11 @@ export const I18N: Record<Lang, any> = {
       heroWe: 'We',
       heroFor: 'for water.',
       heroSubtitle: 'A platform for projects at the intersection of technology, nature, and society.',
-      heroLead1: 'We4Water is an open framework to showcase and connect projects around water.',
+      heroVerbCreate: 'Create',
+      heroVerbBuild: 'Build',
+      heroVerbCultivate: 'Cultivate',
+      heroVerbConnect: 'Connect',
+      heroLead1: 'Do you want to dive into, step onto, or get clean water?',
       cardsTitle: 'Explore our focus areas',
       cardQualityTitle: 'Water Quality',
       cardQualityDesc: 'Monitoring & research',
@@ -50,9 +54,9 @@ export const I18N: Record<Lang, any> = {
       ctaSwim: 'Swim in the Spree'
     },
     quality: {
-      heroTitle: 'Understanding changing waters through real-time sensor data and strategic lab validation.',
+      heroTitle: 'Understanding changing waters.',
       heroLead:
-        'We focus on monitoring, sensors, and open data to understand the health of water bodies. Especially the fluctuating quality of rivers requires better solutions than sampling and slow laboratory analytics. Our projects combine cutting-edge instruments with collaborative fieldwork – from urban river basins to large-scale expeditions.',
+        'Our focus is on monitoring through real time sensor data, strategic lab validation and open data to understand the health of water bodies. Especially the fluctuating quality of rivers requires better solutions than sampling and slow laboratory analytics. Our projects combine cutting-edge instruments with collaborative fieldwork – from urban river basins to large-scale expeditions.',
       projectsTitle: 'Project highlights',
       projectSpree: 'Real-time monitoring of the Spree',
       projectDanube: 'River expeditions from Berlin to Odessa',
@@ -65,9 +69,9 @@ export const I18N: Record<Lang, any> = {
       dataNote: 'For data access (Grafana), contact Ido for credentials.'
     },
     crafts: {
-      heroTitle: 'Designing and building floating structures for water-based ateliers, research, and public access.',
+      heroTitle: 'Designing and building floating infrastructure',
       heroLead:
-        'From a sailing catamaran to historic ship restorations to experimental floating platforms, our work combines engineering, design, and hands-on craftsmanship. These projects are community-driven and create spaces to live, work, and explore on water.',
+        'From designing sailing catamarans to experimental floating platforms to historic ship repurposing, our work combines architecture, engineering, hands-on craftsmanship and endurance in solving burocratic requirements. These projects are community-driven: they create spaces to stay, work, and explore on water. Till now with more than 400 volunteers we have worked to create floating structures for water-based ateliers, research and public access to the water surface.',
       storyTitle: 'Welcome to We4Watercrafts',
       storyCopy:
         'We4Water renews historic cargo vessels and self-built boats to make waterways more accessible and sustainable. We form small ownership groups, work with reclaimed materials, and turn old carriers into vibrant spaces for work, culture, and gatherings.',
@@ -194,7 +198,11 @@ export const I18N: Record<Lang, any> = {
       heroWe: 'Wir',
       heroFor: 'fürs Wasser.',
       heroSubtitle: 'Eine Plattform für Projekte zwischen Technologie, Natur und Gesellschaft.',
-      heroLead1: 'We4Water ist ein offenes Framework, um Projekte rund um Wasser zu zeigen und zu verbinden.',
+      heroVerbCreate: 'Gestalten',
+      heroVerbBuild: 'Bauen',
+      heroVerbCultivate: 'Kultivieren',
+      heroVerbConnect: 'Verbinden',
+      heroLead1: 'Möchtest du eintauchen, an Bord gehen oder sauberes Wasser erhalten?',
       cardsTitle: 'Unsere Schwerpunkte',
       cardQualityTitle: 'Wasserqualität',
       cardQualityDesc: 'Monitoring & Forschung',
@@ -210,9 +218,9 @@ export const I18N: Record<Lang, any> = {
       ctaSwim: 'In der Spree schwimmen'
     },
     quality: {
-      heroTitle: 'Veränderliches Wasser verstehen – mit Echtzeit-Sensordaten und strategischer Laborvalidierung.',
+      heroTitle: 'Veränderliches Wasser verstehen.',
       heroLead:
-        'Wir fokussieren Monitoring, Sensorik und offene Daten, um die Gesundheit von Gewässern zu verstehen. Gerade die schwankende Qualität von Flüssen braucht bessere Lösungen als Stichproben und langsame Labore. Unsere Projekte verbinden High-End-Instrumente mit kollaborativem Feldwork – von urbanen Flussbecken bis zu großen Expeditionen.',
+        'Unser Fokus liegt auf Monitoring durch Echtzeit-Sensordaten, strategischer Laborvalidierung und offenen Daten, um die Gesundheit von Gewässern zu verstehen. Gerade die schwankende Qualität von Flüssen braucht bessere Lösungen als Stichproben und langsame Laboranalytik. Unsere Projekte verbinden High-End-Instrumente mit kollaborativer Feldarbeit – von urbanen Flussbecken bis zu großen Expeditionen.',
       projectsTitle: 'Projekt-Highlights',
       projectSpree: 'Echtzeit-Monitoring der Spree',
       projectDanube: 'Fluss-Expeditionen Berlin–Odessa',
@@ -225,9 +233,9 @@ export const I18N: Record<Lang, any> = {
       dataNote: 'Für Datenzugang (Grafana) bitte Ido wegen Zugangsdaten kontaktieren.'
     },
     crafts: {
-      heroTitle: 'Wir entwerfen und bauen schwimmende Strukturen für Ateliers, Forschung und öffentlichen Wasserzugang.',
+      heroTitle: 'Wir entwerfen und bauen schwimmende Infrastruktur',
       heroLead:
-        'Vom Segelkatamaran über historische Schiffs-Restaurierungen bis zu experimentellen Plattformen verbinden wir Engineering, Design und Handwerk. Die Projekte sind gemeinschaftsgetrieben und schaffen Räume zum Leben, Arbeiten und Entdecken auf dem Wasser.',
+        'Vom Entwerfen von Segelkatamarans über experimentelle schwimmende Plattformen bis hin zu der Wiederbelebung historischer Frachter verbinden wir Architektur, Ingenieurwesen, Handwerk und Endurance in der Lösung von burokratischen Anforderungen. Diese Projekte sind gemeinschaftsgetrieben: sie schaffen Räume zum Leben, Arbeiten und Entdecken auf dem Wasser. Bis jetzt mit mehr als 400 Freiwilligen haben wir geschafft, schwimmende Strukturen für Wasser-basierte Ateliers, Forschung und öffentlichen Zugang zur Wasseroberfläche zu schaffen.',
       storyTitle: 'Willkommen bei We4Watercrafts',
       storyCopy:
         'We4Water belebt historische Frachtschiffe und Selbstbauten, um Wasserwege zugänglicher und nachhaltiger zu machen. Kleine Eigentümergruppen nutzen recycelte Materialien und verwandeln alte Kähne in lebendige Orte für Arbeit, Kultur und Begegnung.',
