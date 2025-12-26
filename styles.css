@@ -142,11 +142,9 @@ body::before {
 @keyframes oceanDrift {
   0% {
     background-position: 0% 0%, 100% 100%, 50% 50%;
-    filter: hue-rotate(0deg) saturate(1.05);
   }
   100% {
     background-position: 20% 10%, 80% 90%, 60% 55%;
-    filter: hue-rotate(-8deg) saturate(1.18);
   }
 }
 
@@ -171,12 +169,13 @@ body::before {
 
 /* Water Bubbles */
 #bubbles-container {
-  position: fixed;
+  position: absolute;
   inset: 0;
   pointer-events: none;
   overflow: hidden;
   /* Keep bubbles visible even when sections cover viewport */
   z-index: 5;
+  height: 100%;
 }
 
 .bubble {
@@ -665,7 +664,7 @@ body::before {
 }
 
 .lightbox {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: radial-gradient(120% 120% at 50% 50%, rgba(2, 44, 67, 0.9), rgba(0, 0, 0, 0.92));
   display: none;
@@ -674,46 +673,79 @@ body::before {
   z-index: 1000;
   padding: 1.5rem;
   backdrop-filter: blur(6px);
+  color: var(--text);
 }
 
 .lightbox.open {
   display: flex;
 }
 
+.lightbox-frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
 .lightbox img {
-  max-width: min(90vw, 1100px);
-  max-height: 85vh;
+  width: min(80vw, 1300px);
+  max-height: 88vh;
+  object-fit: contain;
   border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+}
+
+.lightbox-caption {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-align: center;
+  max-width: 80ch;
+  line-height: 1.4;
 }
 
 .lightbox button {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   position: absolute;
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.16);
   color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 999px;
   padding: 0.55rem 0.95rem;
   cursor: pointer;
   box-shadow: var(--shadow);
-  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  backdrop-filter: blur(6px);
 }
 
 .lightbox button:hover,
 .lightbox button:focus-visible {
-  transform: translateY(-1px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.4);
   outline: none;
 }
 
 .lightbox-close {
-  top: 18px;
-  right: 18px;
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  font-size: 1.1rem;
+  padding-inline: 0.75rem;
 }
 
 .lightbox-arrow {
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
   width: 46px;
@@ -724,11 +756,47 @@ body::before {
 }
 
 .lightbox-arrow.prev {
-  left: 18px;
+  left: 16px;
 }
 
 .lightbox-arrow.next {
-  right: 18px;
+  right: 16px;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus-visible {
+  transform: translateY(-1px);
+}
+
+.lightbox-arrow:hover,
+.lightbox-arrow:focus-visible {
+  transform: translateY(calc(-50% - 1px));
+}
+
+@media (max-width: 640px) {
+  .lightbox-frame {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  .lightbox-close {
+    top: 10px;
+    right: 10px;
+  }
+
+  .lightbox-arrow {
+    width: 42px;
+    height: 42px;
+  }
+
+  .lightbox-arrow.prev {
+    left: 8px;
+  }
+
+  .lightbox-arrow.next {
+    right: 8px;
+  }
 }
 
 .footer {

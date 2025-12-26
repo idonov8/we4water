@@ -39,17 +39,33 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <a className="skip-link" href="#main">
             Skip to content
           </a>
-          <div id="bubbles-container" />
           <div className="site-shell">
+          <div id="bubbles-container" />
             <SiteHeader />
             <main id="main">{children}</main>
             <SiteFooter />
           </div>
-          <div className="lightbox" id="lightbox" aria-hidden="true">
-            <button type="button" aria-label="Close lightbox">
-              Close
-            </button>
-            <img alt="" />
+          <div
+            className="lightbox"
+            id="lightbox"
+            aria-hidden="true"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Image lightbox"
+          >
+            <div className="lightbox-frame">
+              <button className="lightbox-close" type="button" aria-label="Close lightbox" data-close>
+                ×
+              </button>
+              <button className="lightbox-arrow prev" type="button" aria-label="Previous image" data-prev>
+                ‹
+              </button>
+              <img alt="" />
+              <button className="lightbox-arrow next" type="button" aria-label="Next image" data-next>
+                ›
+              </button>
+              <p className="lightbox-caption" data-caption />
+            </div>
           </div>
         </LanguageProvider>
       </body>
