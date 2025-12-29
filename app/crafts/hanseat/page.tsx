@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function HanseatPage() {
   return (
@@ -22,73 +23,204 @@ export default function HanseatPage() {
         </div>
       </section>
 
-      <section className="section surface two-col">
+      <section className="section surface two-col" id="vessel&specs">
         <div>
-          <h2>Specifications</h2>
-          <ul className="list">
-            <li>
-              <strong>Build</strong> — 1907, steel/wood composite cargo barge
-            </li>
-            <li>
-              <strong>Dimensions</strong> — ~54 × 6 m, expansive open deck
-            </li>
-            <li>
-              <strong>Propulsion</strong> — engineless
-            </li>
-            <li>
-              <strong>Status</strong> — finished restoration with volunteer teams and craft specialists
-            </li>
-          </ul>
+          <div className="thumb" style={{ marginTop: '0.75rem' }}>
+            <Image
+              src="/assets/Hanseat/Full%20Hanseat%20in%20Mitte.jpg"
+              alt="Hanseat workshop view (placeholder for 3D model)"
+              fill
+              sizes="(max-width: 900px) 100vw, 50vw"
+              priority={false}
+            />
+          </div>
         </div>
 
         <div>
-          <h2>Services & Features</h2>
+          <h2>Vessel & specs</h2>
+          <p className="muted">
+            Steel/wood composite barge reborn as a generous cultural platform on the water.
+          </p>
           <ul className="list">
-            <li>Large-format deck and interior for theater, concerts, circus rigging, and public gatherings.</li>
-            <li>Ample volume for exhibits, studios, classrooms, or conferences on the water.</li>
+            <li>
+              <strong>Build</strong> — 1907
+            </li>
+            <li>
+              <strong>Dimensions</strong> — ~54 × 6 m
+            </li>
+            <li>
+              <strong>Propulsion</strong> — engineless (towed / hybrid support)
+            </li>
+            <li>
+              <strong>Status</strong> — restoration active
+            </li>
           </ul>
         </div>
       </section>
 
-      <section className="section surface">
-        <h2>Gallery / videos</h2>
-        <p className="muted">Click any image to open the lightbox.</p>
-        <div className="gallery-rows">
-          <img src="/assets/Hanseat/Hanseat%20in%20warehouse.jpg" alt="Hanseat in warehouse" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/Hanseat%20in%20warehouse%202.jpg" alt="Hanseat in warehouse" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/Hanseat%20in%20warehouse%203.jpg" alt="Hanseat in warehouse" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/Hanseat%20in%20warehouse%204.jpg" alt="Hanseat in warehouse" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/Hanseat%20in%20warehouse%205.jpg" alt="Hanseat in warehouse" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/Hanseat%20in%20warehouse%206.jpg" alt="Hanseat in warehouse" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/Hanseat%20in%20warehouse%207.jpg" alt="Hanseat in warehouse" loading="lazy" data-gallery-img />
-          <img
-            src="/assets/Hanseat/Hanseat%20in%20warehouse%207%20%28floor%29.jpg"
-            alt="Hanseat floor detail in warehouse"
-            loading="lazy"
-            data-gallery-img
-          />
-          <img src="/assets/Hanseat/Hanseat%20in%20warehouse%208.jpg" alt="Hanseat in warehouse" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/Hanseat%20in%20warehouse%209.jpg" alt="Hanseat in warehouse" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/Hanseat%20in%20warehouse%2010.jpg" alt="Hanseat in warehouse" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/Hanseat%20in%20warehouse%2011.jpg" alt="Hanseat in warehouse" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/Hanseat%20in%20warehouse%2012.jpg" alt="Hanseat in warehouse" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/old%20hanseat%20out%20of%20the%20water.jpg" alt="Hanseat out of the water" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/rotten%20floor.jpg" alt="Rotted floor detail" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/rotten%20floor%202.jpg" alt="Rotted floor detail" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/1.jpg" alt="Hanseat photo" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/2.jpg" alt="Hanseat photo" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/3.jpg" alt="Hanseat photo" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/4.jpg" alt="Hanseat photo" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/5.jpg" alt="Hanseat photo" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/6.jpg" alt="Hanseat photo" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/7.jpg" alt="Hanseat photo" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/8.jpg" alt="Hanseat photo" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/9.jpg" alt="Hanseat photo" loading="lazy" data-gallery-img />
-          <img src="/assets/Hanseat/10.jpg" alt="Hanseat photo" loading="lazy" data-gallery-img />
-          <img src="/assets/Water_culture/conference%20on%20Hanseat.jpg" alt="Conference on Hanseat" loading="lazy" data-gallery-img />
-          <img src="/assets/Water_culture/conference%20on%20Hanseat%202.jpg" alt="Conference on Hanseat 2" loading="lazy" data-gallery-img />
-          <img src="/assets/Water_culture/conference%20on%20Hanseat%203.jpg" alt="Conference on Hanseat 3" loading="lazy" data-gallery-img />
-          <img src="/assets/Water_culture/concert%20on%20Hanseat.jpg" alt="Concert on Hanseat" loading="lazy" data-gallery-img />
+      <section className="section surface" id="features&services">
+        <div className="two-col">
+          <div>
+            <h2>Features & services</h2>
+            <p className="muted">
+              Finished setup focuses on open cultural programming: concerts, talks, workshops, and community hosting on deck and below.
+            </p>
+            <ul className="list">
+              <li>
+                <strong>Deck</strong> — open platform for stage, cinema, or outdoor gatherings.
+              </li>
+              <li>
+                <strong>Interior</strong> — flexible salon and workspace, ready for exhibition or workshop formats.
+              </li>
+              <li>
+                <strong>Access</strong> — generous ramps and railings for inclusive boarding.
+              </li>
+              <li>
+                <strong>Services</strong> — shore power, lighting, and modular seating for rapid reconfiguration.
+              </li>
+            </ul>
+          </div>
+          <div className="gallery-rows features-gallery" style={{ marginTop: '0.5rem' }}>
+            <div className="gallery-media">
+              <Image
+                src="/assets/Water_culture/concert%20on%20Hanseat.jpg"
+                alt="Concert on Hanseat deck"
+                fill
+                sizes="(max-width: 900px) 85vw, 520px"
+                data-gallery-img
+              />
+            </div>
+            <div className="gallery-media">
+              <Image
+                src="/assets/Water_culture/conference%20on%20Hanseat.jpg"
+                alt="Conference setup on Hanseat"
+                fill
+                sizes="(max-width: 900px) 85vw, 520px"
+                data-gallery-img
+              />
+            </div>
+            <div className="gallery-media">
+              <Image
+                src="/assets/Hanseat/6.jpg"
+                alt="Hanseat deck detail"
+                fill
+                sizes="(max-width: 900px) 85vw, 520px"
+                data-gallery-img
+              />
+            </div>
+            <div className="gallery-media">
+              <Image
+                src="/assets/Hanseat/8.jpg"
+                alt="Hanseat interior detail"
+                fill
+                sizes="(max-width: 900px) 85vw, 520px"
+                data-gallery-img
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section surface" id="Gallery&Videos">
+        <h2>Gallery & videos</h2>
+        <p className="muted">Curated looks at the vessel now and through the rebuild.</p>
+
+        <h3 style={{ marginTop: '1rem' }}>Now</h3>
+        <div className="gallery-rows gallery-rows--thumbs">
+          <div className="gallery-media">
+            <Image
+              src="/assets/Water_culture/conference%20on%20Hanseat%202.jpg"
+              alt="Now: conference on Hanseat"
+              fill
+              sizes="(max-width: 900px) 85vw, 520px"
+              data-gallery-img
+            />
+          </div>
+          <div className="gallery-media">
+            <Image
+              src="/assets/Water_culture/conference%20on%20Hanseat%203.jpg"
+              alt="Now: workshop on Hanseat"
+              fill
+              sizes="(max-width: 900px) 85vw, 520px"
+              data-gallery-img
+            />
+          </div>
+          <div className="gallery-media">
+            <Image
+              src="/assets/Water_culture/concert%20on%20Hanseat.jpg"
+              alt="Now: concert on Hanseat"
+              fill
+              sizes="(max-width: 900px) 85vw, 520px"
+              data-gallery-img
+            />
+          </div>
+          <div className="gallery-media">
+            <Image
+              src="/assets/Hanseat/10.jpg"
+              alt="Now: Hanseat exterior detail"
+              fill
+              sizes="(max-width: 900px) 85vw, 520px"
+              data-gallery-img
+            />
+          </div>
+        </div>
+
+        <h3 style={{ marginTop: '1rem' }}>Building & development</h3>
+        <div className="gallery-rows gallery-rows--thumbs">
+          <div className="gallery-media">
+            <Image
+              src="/assets/Hanseat/old%20hanseat%20out%20of%20the%20water.jpg"
+              alt="Build: hull lifted from the water"
+              fill
+              sizes="(max-width: 900px) 85vw, 520px"
+              data-gallery-img
+            />
+          </div>
+          <div className="gallery-media">
+            <Image
+              src="/assets/Hanseat/Hanseat%20in%20warehouse.jpg"
+              alt="Build: Hanseat in the warehouse"
+              fill
+              sizes="(max-width: 900px) 85vw, 520px"
+              data-gallery-img
+            />
+          </div>
+          <div className="gallery-media">
+            <Image
+              src="/assets/Hanseat/Hanseat%20in%20warehouse%207%20%28floor%29.jpg"
+              alt="Build: deck reconstruction detail"
+              fill
+              sizes="(max-width: 900px) 85vw, 520px"
+              data-gallery-img
+            />
+          </div>
+          <div className="gallery-media">
+            <Image
+              src="/assets/Hanseat/rotten%20floor.jpg"
+              alt="Build: removing damaged floor"
+              fill
+              sizes="(max-width: 900px) 85vw, 520px"
+              data-gallery-img
+            />
+          </div>
+          <div className="gallery-media">
+            <Image
+              src="/assets/Hanseat/rotten%20floor%202.jpg"
+              alt="Build: floor removal progress"
+              fill
+              sizes="(max-width: 900px) 85vw, 520px"
+              data-gallery-img
+            />
+          </div>
+          <div className="gallery-media">
+            <Image
+              src="/assets/Hanseat/Hanseat%20in%20warehouse%202.jpg"
+              alt="Build: hull support in hall"
+              fill
+              sizes="(max-width: 900px) 85vw, 520px"
+              data-gallery-img
+            />
+          </div>
         </div>
       </section>
     </>
