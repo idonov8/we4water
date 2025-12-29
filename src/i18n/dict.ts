@@ -5,7 +5,7 @@ export const I18N: Record<Lang, any> = {
     nav: {
       home: 'Home',
       quality: 'Quality',
-      crafts: 'Crafts',
+      crafts: 'Watercrafts',
       treatment: 'Treatment',
       culture: 'Culture',
       about: 'About',
@@ -69,16 +69,16 @@ export const I18N: Record<Lang, any> = {
       dataNote: 'For data access (Grafana), contact Ido for credentials.'
     },
     crafts: {
-      heroTitle: 'Designing and building floating infrastructure',
+      heroTitle: 'Floating infrastructure',
+      heroSubtitle: 'Welcome to We4Watercrafts',
       heroLead:
-        'From designing sailing catamarans to experimental floating platforms to historic ship repurposing, our work combines architecture, engineering, hands-on craftsmanship and endurance in solving burocratic requirements. These projects are community-driven: they create spaces to stay, work, and explore on water. Till now with more than 400 volunteers we have worked to create floating structures for water-based ateliers, research and public access to the water surface.',
-      storyTitle: 'Welcome to We4Watercrafts',
-      storyCopy:
         'We4Water renews historic cargo vessels and self-built boats to make waterways more accessible and sustainable. We form small ownership groups, work with reclaimed materials, and turn old carriers into vibrant spaces for work, culture, and gatherings.',
+      heroDetail:
+        'From designing sailing catamarans to experimental floating platforms to historic ship repurposing, our work combines architecture, engineering, hands-on craftsmanship and endurance in solving burocratic requirements. These projects are community-driven: they create spaces to stay, work, and explore on water. Till now with more than 400 volunteers we have worked to create floating structures for water-based ateliers, research and public access to the water surface.',
       altIntroTitle: 'Alternative focus',
       altIntroCopy:
         'Today we focus on transforming historic cargo ships in Berlin’s harbor instead of letting them be scrapped. Small groups collaborate to recycle materials, preserve heritage, and create welcoming spaces on the water.',
-      vesselsTitle: 'Fleet & projects',
+      vesselsTitle: 'Fleet & Services',
       hanseatTitle: 'Hanseat (1907)',
       hanseatDesc: '54 × 6 m steel/wood barge, former cargo vessel without engine; now restored with volunteer power.',
       elisabethTitle: 'Elisabeth (1905)',
@@ -169,7 +169,7 @@ export const I18N: Record<Lang, any> = {
     nav: {
       home: 'Start',
       quality: 'Qualität',
-      crafts: 'Boote',
+      crafts: 'Watercrafts',
       treatment: 'Aufbereitung',
       culture: 'Kultur',
       about: 'Über uns',
@@ -233,16 +233,16 @@ export const I18N: Record<Lang, any> = {
       dataNote: 'Für Datenzugang (Grafana) bitte Ido wegen Zugangsdaten kontaktieren.'
     },
     crafts: {
-      heroTitle: 'Wir entwerfen und bauen schwimmende Infrastruktur',
+      heroTitle: 'Schwimmende Infrastruktur',
+      heroSubtitle: 'Willkommen bei We4Watercrafts',
       heroLead:
-        'Vom Entwerfen von Segelkatamarans über experimentelle schwimmende Plattformen bis hin zu der Wiederbelebung historischer Frachter verbinden wir Architektur, Ingenieurwesen, Handwerk und Endurance in der Lösung von burokratischen Anforderungen. Diese Projekte sind gemeinschaftsgetrieben: sie schaffen Räume zum Leben, Arbeiten und Entdecken auf dem Wasser. Bis jetzt mit mehr als 400 Freiwilligen haben wir geschafft, schwimmende Strukturen für Wasser-basierte Ateliers, Forschung und öffentlichen Zugang zur Wasseroberfläche zu schaffen.',
-      storyTitle: 'Willkommen bei We4Watercrafts',
-      storyCopy:
         'We4Water belebt historische Frachtschiffe und Selbstbauten, um Wasserwege zugänglicher und nachhaltiger zu machen. Kleine Eigentümergruppen nutzen recycelte Materialien und verwandeln alte Kähne in lebendige Orte für Arbeit, Kultur und Begegnung.',
+      heroDetail:
+        'Vom Entwerfen von Segelkatamarans über experimentelle schwimmende Plattformen bis hin zu der Wiederbelebung historischer Frachter verbinden wir Architektur, Ingenieurwesen, Handwerk und Endurance in der Lösung von burokratischen Anforderungen. Diese Projekte sind gemeinschaftsgetrieben: sie schaffen Räume zum Leben, Arbeiten und Entdecken auf dem Wasser. Bis jetzt mit mehr als 400 Freiwilligen haben wir geschafft, schwimmende Strukturen für Wasser-basierte Ateliers, Forschung und öffentlichen Zugang zur Wasseroberfläche zu schaffen.',
       altIntroTitle: 'Aktueller Fokus',
       altIntroCopy:
         'Heute konzentrieren wir uns auf den Berliner Hafen: Statt alte Frachter zu verschrotten, recyceln wir Materialien, bewahren maritimes Erbe und schaffen einladende Räume auf dem Wasser.',
-      vesselsTitle: 'Flotte & Projekte',
+      vesselsTitle: 'Flotte & Dienstleistungen',
       hanseatTitle: 'Hanseat (1907)',
       hanseatDesc: '54 × 6 m Stahl/Holz-Kahn ohne Motor, ehem. Frachter; nun mit Freiwilligenkraft saniert.',
       elisabethTitle: 'Elisabeth (1905)',

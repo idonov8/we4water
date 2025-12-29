@@ -9,20 +9,21 @@ export default function CraftsPage() {
           <h1>
             <Trans k="crafts.heroTitle" />
           </h1>
+
+          <h2>
+            <Trans k="crafts.heroSubtitle" />
+          </h2>
+
           <p>
             <Trans k="crafts.heroLead" />
+          </p>
+
+          <p>
+            <Trans k="crafts.heroDetail" />
           </p>
         </div>
       </section>
 
-      <section className="section surface">
-        <h2>
-          <Trans k="crafts.storyTitle" />
-        </h2>
-        <p>
-          <Trans k="crafts.storyCopy" />
-        </p>
-      </section>
 
       <section className="section surface">
         <h2>
