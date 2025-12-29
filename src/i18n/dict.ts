@@ -13,7 +13,7 @@ export const I18N: Record<Lang, any> = {
       contact: 'Contact'
     },
     footer: {
-      rights: 'We4Water — Open framework for water',
+      rights: 'We4Water — Open framework for projects around water',
       legal: 'Legal',
       imprint: 'Imprint',
       privacy: 'Privacy'
@@ -79,8 +79,14 @@ export const I18N: Record<Lang, any> = {
       altIntroCopy:
         'Today we focus on transforming historic cargo ships in Berlin’s harbor instead of letting them be scrapped. Small groups collaborate to recycle materials, preserve heritage, and create welcoming spaces on the water.',
       vesselsTitle: 'Fleet & Services',
+      fleetTitle: 'Fleet',
+      servicesTitle: 'Services',
+      servicesIntro: 'General services:',
+      serviceDesign: 'Design of floating infrastructure',
+      serviceRental: 'Rental of floating infrastructure',
+      serviceRenovation: 'Renovation and boat building services',
       hanseatTitle: 'Hanseat (1907)',
-      hanseatDesc: '54 × 6 m steel/wood barge, former cargo vessel without engine; now restored with volunteer power.',
+      hanseatDesc: '54 × 6 m steel/wood barge, former cargo vessel without engine; now restored with volunteers.',
       elisabethTitle: 'Elisabeth (1905)',
       elisabethDesc: '43 × 4.6 m steel cargo barge with electric engine; Berlin cultural platform in the making.',
       martinTitle: 'Martin (1890)',
@@ -243,6 +249,12 @@ export const I18N: Record<Lang, any> = {
       altIntroCopy:
         'Heute konzentrieren wir uns auf den Berliner Hafen: Statt alte Frachter zu verschrotten, recyceln wir Materialien, bewahren maritimes Erbe und schaffen einladende Räume auf dem Wasser.',
       vesselsTitle: 'Flotte & Dienstleistungen',
+      fleetTitle: 'Flotte',
+      servicesTitle: 'Dienstleistungen',
+      servicesIntro: 'Allgemeine Leistungen:',
+      serviceDesign: 'Design von schwimmender Infrastruktur',
+      serviceRental: 'Vermietung von schwimmender Infrastruktur',
+      serviceRenovation: 'Sanierung sowie Boots- und Schiffbauleistungen',
       hanseatTitle: 'Hanseat (1907)',
       hanseatDesc: '54 × 6 m Stahl/Holz-Kahn ohne Motor, ehem. Frachter; nun mit Freiwilligenkraft saniert.',
       elisabethTitle: 'Elisabeth (1905)',

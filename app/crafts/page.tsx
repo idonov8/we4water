@@ -1,7 +1,47 @@
 import Link from 'next/link';
 import { Trans } from '@/app/components/Trans';
+import { PencilSquareIcon, ClipboardDocumentListIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
+import { FleetList, type FleetItem } from './FleetList';
 
 export default function CraftsPage() {
+  const fleet: FleetItem[] = [
+    {
+      href: '/crafts/hanseat/',
+      name: 'Hanseat',
+      lengthM: 54,
+      ariaLabel: 'Hanseat — approx. 54 m',
+      descKey: 'crafts.hanseatDesc',
+    },
+    {
+      href: '/crafts/elisabeth/',
+      name: 'Elisabeth',
+      lengthM: 43,
+      ariaLabel: 'Elisabeth — approx. 43 m',
+      descKey: 'crafts.elisabethDesc',
+    },
+    {
+      href: '/crafts/martin/',
+      name: 'Martin',
+      lengthM: 33,
+      ariaLabel: 'Martin — approx. 33 m',
+      descKey: 'crafts.martinDesc',
+    },
+    {
+      href: '/crafts/esperantos/',
+      name: 'Esperantos',
+      lengthM: 12.5,
+      ariaLabel: 'Esperantos — approx. 12.5 m',
+      descKey: 'crafts.esperantosDesc',
+    },
+    {
+      href: '/crafts/pontoon/',
+      name: 'Pontoon',
+      lengthM: 11.1,
+      ariaLabel: 'Pontoon — approx. 11.1 m',
+      descKey: 'crafts.pontoonDesc',
+    },
+  ];
+
   return (
     <>
       <section className="hero surface">
@@ -24,87 +64,50 @@ export default function CraftsPage() {
         </div>
       </section>
 
-
-      <section className="section surface">
-        <h2>
-          <Trans k="crafts.vesselsTitle" />
+      <section className="section surface" aria-labelledby="services">
+        <h2 id="services" className="section-title-center">
+          <Trans k="crafts.servicesTitle" />
         </h2>
-        <div className="cards-grid">
-          <Link className="card" href="/crafts/hanseat/">
-            <img
-              className="thumb"
-              src="/assets/Hanseat/Hanseat%20in%20warehouse%205.jpg"
-              alt="Hanseat restoration work"
-              loading="lazy"
-            />
-            <strong>
-              <Trans k="crafts.hanseatTitle" />
-            </strong>
-            <p>
-              <Trans k="crafts.hanseatDesc" />
-            </p>
-          </Link>
 
-          <Link className="card" href="/crafts/esperantos/">
-            <img className="thumb" src="/assets/Esperantos/in%20the%20air.jpg" alt="Esperantos sailing catamaran" loading="lazy" />
-            <strong>
-              <Trans k="crafts.esperantosTitle" />
-            </strong>
-            <p>
-              <Trans k="crafts.esperantosDesc" />
-            </p>
-          </Link>
+        <div className="services-grid" role="list" aria-label="Services">
+          <div className="service-card" role="listitem">
+            <div className="service-icon" aria-hidden="true">
+              <PencilSquareIcon className="service-heroicon" />
+            </div>
+            <div className="service-text">
+              <Trans k="crafts.serviceDesign" />
+            </div>
+          </div>
 
-          <Link className="card" href="/crafts/elisabeth/">
-            <div className="thumb placeholder">Image coming soon</div>
-            <strong>
-              <Trans k="crafts.elisabethTitle" />
-            </strong>
-            <p>
-              <Trans k="crafts.elisabethDesc" />
-            </p>
-          </Link>
+          <div className="service-card" role="listitem">
+            <div className="service-icon" aria-hidden="true">
+              <ClipboardDocumentListIcon className="service-heroicon" />
+            </div>
+            <div className="service-text">
+              <Trans k="crafts.serviceRental" />
+            </div>
+          </div>
 
-          <Link className="card" href="/crafts/martin/">
-            <div className="thumb placeholder">Image coming soon</div>
-            <strong>
-              <Trans k="crafts.martinTitle" />
-            </strong>
-            <p>
-              <Trans k="crafts.martinDesc" />
-            </p>
-          </Link>
-
-          <Link className="card" href="/crafts/pontoon/">
-            <div className="thumb placeholder">Image coming soon</div>
-            <strong>
-              <Trans k="crafts.pontoonTitle" />
-            </strong>
-            <p>
-              <Trans k="crafts.pontoonDesc" />
-            </p>
-          </Link>
+          <div className="service-card" role="listitem">
+            <div className="service-icon" aria-hidden="true">
+              <WrenchScrewdriverIcon className="service-heroicon" />
+            </div>
+            <div className="service-text">
+              <Trans k="crafts.serviceRenovation" />
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="section surface two-col">
-        <div>
-          <h2>
-            <Trans k="crafts.peopleTitle" />
-          </h2>
-          <p>
-            <Trans k="crafts.peopleCopy" />
-          </p>
-        </div>
-        <div className="cta-stack">
-          <Link className="btn" href="/join/">
-            <Trans k="common.volunteer" />
-          </Link>
-          <Link className="btn secondary" href="/contact/">
-            <Trans k="common.contact" />
-          </Link>
-        </div>
+      <section className="section surface" aria-labelledby="fleet">
+        <h2 id="fleet" className="section-title-center">
+          <Trans k="crafts.fleetTitle" />
+        </h2>
+
+        <FleetList fleet={fleet} />
       </section>
+
+      
     </>
   );
 }
